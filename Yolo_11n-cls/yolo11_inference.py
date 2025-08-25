@@ -16,7 +16,7 @@ def prediction(processed_image):
         # Access predicted classes and confidence scores
         #print(f"Predicted class: {r.names[r.probs.top1]} (Confidence: {r.probs.top1conf:.2f})")
     result = results[0]
-    inference = f"Predicted claass: {result.names[result.probs.top1]}\nConfidence: {result.probs.top1conf*100:.2f}%"
+    inference = f"{result.names[result.probs.top1]}\n{result.probs.top1conf*100:.2f}% Confidence"
 
     return inference
 
